@@ -140,7 +140,7 @@ Execute the restart program
 
 ## 👨‍💻 Author
 
-**Zhou Xingyu**
+**Travis Chou**
 
 * Department: Design Quality Assurance (DQA)
 
