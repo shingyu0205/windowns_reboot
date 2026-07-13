@@ -1,155 +1,121 @@
 # windowns_reboot
 
-## Project Introduction
-This project simulates the "Slide to Restart" interface on Windows mobile devices.
+# Slide To Restart
 
-After execution, the following will occur:
+A PowerShell-based application that simulates the **Windows "Slide to Restart"** interface. The project provides an interactive full-screen restart experience by displaying a slide panel that allows users to trigger a system restart through a sliding action.
 
-1. Open a full-screen black semi-transparent window
+## Features
 
-2. Display a draggable sliding panel
+* Full-screen restart interface
+* Semi-transparent black background
+* Always-on-top window
+* Interactive slide-to-restart panel
+* PowerShell GUI implementation
+* Easy execution through a batch file
 
-3. The user can trigger the restart function through sliding operations
-
-4. Provide a more aesthetically pleasing and interactive reboot experience
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```text
-
 .
 ├── reboot_1.bat
-
 └── SlideToRestart.ps1
-
 ```
 
-### reboot_1.bat
+### Files Description
 
-The batch file is responsible for calling the PowerShell script:
+#### `reboot_1.bat`
+
+A batch file that launches the PowerShell script.
 
 ```bat
-
 @echo off
 pwsh -NoProfile -ExecutionPolicy Bypass -File "C:\Users\DQA\Desktop\SlideToRestart.ps1"
-
 ```
 
-### SlideToRestart.ps1
+#### `SlideToRestart.ps1`
 
-PowerShell GUI script, main functions include:
+The main PowerShell script responsible for:
 
 * Creating a full-screen window
+* Displaying a semi-transparent background
+* Setting the window to stay on top
+* Building the slide interface
+* Detecting user slide actions
+* Triggering the restart process
 
-* Black semi-transparent background
+## Requirements
 
-* Top-Most display
-
-* Create a sliding panel
-
-* Detect user swipe actions
-
-* Restart the program
-
----
-
-## 🛠️ System Requirements
-
-* Windows 10 / Windows 11
-
+* Windows 10 or Windows 11
 * PowerShell 7 (pwsh)
-
 * .NET Framework
-
 * System.Windows.Forms
-
 * PresentationFramework
 
-You can use the following command to check your PowerShell version:
+Check your PowerShell version:
 
-``powershell pwsh --version
-
+```powershell
+pwsh --version
 ```
 
----
+## Usage
 
-## 🚀 Usage
-
-### Method 1: Execute the BAT file directly
+### Method 1: Run the Batch File
 
 Double-click:
 
-```text reboot_1.bat
-
-```
-The program will automatically call:
-
-```powershell SlideToRestart.ps1
-
+```text
+reboot_1.bat
 ```
 
----
+The batch file will automatically execute:
 
-### Method 2: Execute using PowerShell
-
-```powershell pwsh -ExecutionPolicy Bypass -File .\SlideToRestart.ps1
-
+```powershell
+SlideToRestart.ps1
 ```
 
----
-## ⚙️ Execution Flow
+### Method 2: Run with PowerShell
+
+```powershell
+pwsh -ExecutionPolicy Bypass -File .\SlideToRestart.ps1
+```
+
+## Workflow
 
 ```text
-Execute BAT
-
-│
-▼
-Start PowerShell
-
-│
-▼
-Create a full-screen black interface
-
-│
-▼
-Display the Slide To Restart control
-
-│
-▼
-User drags and slides
-
-│
-▼
-Execute the restart program
-
+Run reboot_1.bat
+        │
+        ▼
+Launch PowerShell Script
+        │
+        ▼
+Create Full-Screen Interface
+        │
+        ▼
+Display Slide Panel
+        │
+        ▼
+Detect Slide Action
+        │
+        ▼
+Execute System Restart
 ```
 
----
+## Use Cases
 
-## 📌 Application Scenarios
+* PowerShell GUI demonstrations
+* Windows interface simulations
+* System administration tools
+* Custom restart workflows
+* Learning and educational projects
 
-* Demonstrate PowerShell GUI development capabilities
-* Simulate Windows system interface
-* Automated maintenance tools
-* Customized restart process
-* Internal demonstration or teaching purposes
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Travis Chou**
 
 * Department: Design Quality Assurance (DQA)
-
-* Language: PowerShell, Batch
-
+* Languages: PowerShell, Batch
 * Platform: Windows
 
----
+## License
 
-## 📄 License
-
-This project is released under the MIT License.
+This project is licensed under the MIT License.
