@@ -1,2 +1,2 @@
 @echo off
-pwsh -NoProfile -ExecutionPolicy Bypass -File "C:\Users\DQA\Desktop\SlideToRestart.ps1"
+pwsh -NoProfile -ExecutionPolicy Bypass -File "%~dp0SlideToRestart.ps1"
